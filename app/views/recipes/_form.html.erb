@@ -1,16 +1,14 @@
 <%= form_for @recipe do |f| %>
-  <div class="form-control">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="form-control">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-  <div class="form-control">
-    <%= f.file_field :image %>
-  </div>
-  <div class="actions">
+  <%= render 'shared/errors', object: @recipe %>
+
+  <div class="main-recipe">
+
+      <%= f.text_field :title, class: 'form-control', placeholder: 'title of recipe' %></br>
+      <%= f.text_field :description, class: 'form-control', placeholder: 'description of your recipe' %></br>
+      <%= f.file_field :image %></br>
+  </div></br>
+
+
+
     <%= f.submit 'Add Recipe' %>
-  </div>
 <% end %>

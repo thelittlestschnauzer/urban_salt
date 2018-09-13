@@ -1,10 +1,15 @@
 <h1>Recipe Collection</h1>
 
-<div class="recipes">
+<div class="row">
   <% @recipes.each do |recipe| %>
-    <div class="recipe">
-      <h3><%= recipe.title %></h3>
-      <p><%= recipe.description %></p>
-    </div>
+    <div class="col-md-3">
+      <div class="recipe">
+        <div class="image-wrapper">
+          <%= image_tag recipe.image_url(:thumb).to_s %>
+        <h3><%= link_to recipe.title, recipe %></h3>
+        <p><%= recipe.description %></p>
+      </div><!--image-wrapper-->
+    </div><!--recipe-->
+  </div><!--col-md-3-->
   <% end %>
 </div>

@@ -15,6 +15,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'file_validators'
+gem 'jquery-rails'
+gem 'bootstrap'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
